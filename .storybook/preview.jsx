@@ -1,6 +1,10 @@
 import { View } from "react-native";
+import { initialize, mswLoader } from "msw-storybook-addon";
 
 /** @type{import("@storybook/react").Preview} */
+
+initialize();
+
 const preview = {
   parameters: {
     controls: {
@@ -10,7 +14,7 @@ const preview = {
       },
     },
   },
-
+  loaders: [mswLoader],
   decorators: [
     (Story, { parameters }) => (
       <View
