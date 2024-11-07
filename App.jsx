@@ -1,7 +1,13 @@
 import { LogBox, StyleSheet, Text, View } from "react-native";
 import Constants from "expo-constants";
 import StarWars from "./components/StarWars";
+import { setupServer } from "msw/native";
+import { handlers } from "./.storybook/msw-handlers";
+
 LogBox.ignoreAllLogs();
+
+const server = setupServer(...handlers);
+server.listen();
 
 function App() {
   return (
