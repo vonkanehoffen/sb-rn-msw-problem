@@ -1,9 +1,9 @@
 import { View } from "react-native";
-// import { initialize, mswLoader } from "msw-storybook-addon";
+import { initialize, mswLoader } from "msw-storybook-addon";
 
 /** @type{import("@storybook/react").Preview} */
 
-// initialize();
+initialize();
 
 const preview = {
   parameters: {
@@ -14,7 +14,7 @@ const preview = {
       },
     },
   },
-  // loaders: [mswLoader],
+  loaders: [mswLoader],
   decorators: [
     (Story, { parameters }) => (
       <View

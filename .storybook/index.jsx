@@ -1,4 +1,4 @@
-import "./polyfills";
+// import "./polyfills";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { view } from "./storybook.requires";
 
